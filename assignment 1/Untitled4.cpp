@@ -1,43 +1,37 @@
-/*2.
-Assign and print the roll number, phone number and address 
-of two students having names "Sam"
-and "John" respectively by creating two objects of the class 'Student'
+
+/*4.
+Write a program to print the area and perimeter of a triangle having sides of 3, 4 and 5 units by
+creating a class named 'Triangle' with the constructor having the three sides as its parameters.
 */
 #include<iostream>
+#include<cmath>
 using namespace std;
-class student
-{
+class tringle{
 	public:
-		string name,adress;
-		int roll_no;
-		long int mobino;
-		 student()
-		 {
-		 	cout<<"\nEnter the students details:";
-		 	cout<<"\nEnter the students name:";
-		 	cin>>name;
-		 	cout<<"\nEnter the students rollno:";
-		 	cin>>roll_no;
-		 	cout<<"\nEnter the students mobino:";
-		 	cin>>mobino;
-		 	cout<<"\nEnter the students adress:";
-		 	cin>>adress;
-		 	
-		 }
-		 void show()
-		 {
-		 	cout<<"\nname="<<name;
-		 	cout<<"\nrollno="<<roll_no;
-		 	cout<<"\mobi no="<<mobino;
-		 	cout<<"\nadress="<<adress;
-		 }
+	   int a,b,c;
+	   float area,perimeter,sp;
+	   tringle(){
+	      a=3;
+	      b=4;
+	      c=5;
+       }
+	   void ar(){
+	   	sp=(a+b+c)/2;
+	   	area=sqrt(sp*(sp-a)*(sp-b)*(sp-c));
+	   	cout<<"\nArea of tringle"<<area;
+	   }
+	   void pr(){
+	   	perimeter=a+b+c;
+	   	cout<<"\n perimeter of tringle"<<perimeter;
+	   	
+	   }
+	   
 };
-
-main()
-{
-	student r1,r2;
-	r1.show();
-	r2.show();
-	
+main(){
+	tringle t1;
+	t1.ar();
+	t1.pr();
 }
+
+
 
